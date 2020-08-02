@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Barbershop
+	</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+
+	<div class="header clearfix">
+		<div class="logo">
+			<a href="#">
+				<img src="images/logo-black.png">
+				<span>barberking</span>
+			</a>
+		</div>
+
+		<div class="navigation">
+			<ul>
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#lookbook">Lookbook</a></li>
+				<li><a href="#reservations">Reservation</a></li>
+				<li><a href="#contacts">Contacts</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="start-page">
+		<span class="title">
+			The coolest <br />
+			<span class="barbershop">barbershop</span>
+		</span>
+	</div>
+
+	<div class="about">
+		<a name="about" style="display:block;margin-bottom: 100px; margin-top:-50px"></a>
+
+		<h1>About</h1>
+		<hr class="yellow-hr" noshade/>
+
+		<div class="about-column about-column-main">
+			<img src="images/quotes.png" />
+			<h2>We have the best masters in the world</h2>
+		</div>
+
+		<div class="about-column">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. 
+			Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+
+		<div class="about-column">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. 
+		</div>
+	</div>
+
+	<div class="detail">
+		<div class="rotate">
+			<h2>
+				Every single <br />detail matters
+			</h2>
+			<img src="images/box-for-details.jpg" />
+		</div>
+	</div>
+
+	<div class="services">
+		<a name="services" style="display:block;margin-bottom: 100px; margin-top:-50px"></a>
+		<h1>Services</h1>
+		<hr class="yellow-hr" noshade/>
+
+		<div class="single-service single-service-first">
+			<h3>
+				Haircut
+				<span class="price">10</span>
+			</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
+		</div>
+
+		<div class="single-service">
+			<h3>
+				Shave
+				<span class="price">20</span>
+			</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
+		</div>
+
+		<div class="single-service">
+			<h3>
+				Beard style
+				<span class="price">20</span>
+			</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
+		</div>
+
+		<div class="single-service">
+			<h3>
+				Special haircut
+				<span class="price">30</span>
+			</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
+		</div>
+	</div>
+
+	<div class="lookbook clearfix">
+		<a name="lookbook" style="display:block;margin-bottom: 100px; margin-top:-50px"></a>
+		<h1>Lookbook</h1>
+		<hr class="yellow-hr" noshade/>
+
+		<div class="images">
+			<img src="images/lookbook1.jpg" />
+			<img src="images/lookbook2.jpg" />
+			<img src="images/lookbook3.jpg" />
+			<img src="images/lookbook4.jpg" />
+		</div>
+	</div>
+	<!-- доделать по ширине!!!  -->
+
+	<div class="reservations">
+		<a name="reservations" style="display:block;margin-bottom: 100px; margin-top:-50px"></a>
+		<h1>Reservations</h1>
+		<hr class="yellow-hr" noshade/>
+
+		<form class="contact-send">
+			<input type="name" name="name"  value="Full name" onfocus="this.value=''" required />
+			<br />
+			<input type="tel" name="tel"  value="Phone number" onfocus="this.value=''" required/>
+			<br />
+			<input type="email" name="email"  value="E-mail" onfocus="this.value=''" />
+			<br />
+			<input type="datetime" name="datetime"  value="Date and time" onfocus="this.value=''" required />
+			<br />
+			<textarea rows="10" cols="70" onfocus="this.value=''" >Additional requirements</textarea>
+			<br />
+			<input class="submit-button" type="submit" name="submit"  value="Reserve" />
+		</form>
+	</div>
+
+	<div class="contacts">
+		<a name="contacts" style="display:block;margin-bottom: 100px; margin-top:-50px"></a>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9921685718195!2d-73.81753338470845!3d40.74019784382708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2605d277c5d03%3A0xe11d42a7faf35b1!2sBarberKing+UniSex+INC+Barbershop!5e0!3m2!1sru!2sua!4v1452453675605" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+
+	<div class="footer clearfix">
+		<div class="logo">
+			<a href="#">
+				<img src="images/logo-white.png">
+				<span>barberking</span>
+			</a>
+		</div>
+
+		<div class="navigation">
+			<ul>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Lookbook</a></li>
+				<li><a href="#">Reservation</a></li>
+				<li><a href="#">Contacts</a></li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

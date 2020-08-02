@@ -1,0 +1,544 @@
+/* Configs */ 
+@font-face {
+	font-family: AzedoBold; /* Имя шрифта */
+    src: url(fonts/Azedo-Bold.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+	font-family: AzedoLight; /* Имя шрифта */
+    src: url(fonts/Azedo-Light.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+	font-family: Born; /* Имя шрифта */
+    src: url(fonts/Born.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+	font-family: FenotypeSlimTony; /* Имя шрифта */
+    src: url(fonts/Fenotype-SlimTony.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+	font-family: proximanovabold; /* Имя шрифта */
+    src: url(fonts/proximanova-bold.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+	font-family: proximanova-regular; /* Имя шрифта */
+    src: url(fonts/proximanovacond-regular.otf); /* Путь к файлу со шрифтом */
+}
+/* Base */ 
+
+* {
+	box-sizing: border-box;
+}
+html {
+}
+
+a {
+			&, 
+			&:active,
+			&:visited,
+			&:hover {
+				color: black;
+				text-decoration: none;
+			}
+}
+
+.yellow-hr {
+	border: none; /* Убираем границу для браузера Firefox */
+    color: #ffdc19; /* Цвет линии для остальных браузеров */
+    background-color: #ffdc19; /* Цвет линии для браузера Firefox и Opera */
+    height: 2px; /* Толщина линии */
+    margin-bottom: 50px;
+}
+
+h1 {
+		font-family: proximanova-regular;
+		font-size: 24px !important;
+		text-transform: uppercase;
+}
+
+
+/* Layout */
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.header {
+	padding: 35px 100px;
+	position: fixed;
+	width: 100%;
+	background-color: white;
+    box-shadow: 0 0 30px rgba(0,0,0,1); /* Параметры тени */
+    z-index: 2; /* Чтобы relative блоки  не прятали меню под себя */
+    
+    .logo {
+		display: inline-block;
+
+		img {
+			margin: 10px;
+			display: inline;
+			vertical-align: middle;
+		}
+		span {
+			font-family: AzedoBold;
+			font-size: 34px;
+		}
+	}
+
+	.navigation {
+		display: inline-block;
+		float: right;
+
+		ul {
+			li {
+				display: inline;
+				margin-left: 25px;
+				font-family: proximanova-regular;
+				font-size: 14px;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+@media (max-width: 900px){
+	.header {
+		width: 100%;
+		padding: 20px;
+		position: static;
+		box-shadow: none;
+
+	}
+}
+
+@media (max-width: 750px) {
+	.header {
+		.logo, 
+		.navigation {
+			ul {
+				li {
+					margin-left: 10px;
+					font-size: 11px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.header {
+		text-align: center;
+
+		.logo,
+		.navigation {
+			display: inline;
+			float: none;
+
+			ul {
+				padding: 0;
+			}
+		}
+		
+	}
+}
+
+.start-page {
+	background: url("images/header_bg.jpg");
+	-moz-background-size: cover; /* Firefox 3.6+ */
+    -webkit-background-size: cover; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: cover; /* Opera 9.6+ */
+    background-size: cover; /* Современные браузеры */
+    min-height: 100vh;
+    padding-top: 18%;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+
+   
+    .title {
+    	font-family: proximanovabold;
+    	font-size: 64px;
+
+    	.barbershop {
+    		font-family: FenotypeSlimTony;
+    		font-size: 70px;
+    	}
+    }
+}
+
+@media (max-width: 900px)
+{
+	.start-page {
+    	padding-top: 25%;
+
+    	.title {
+    	font-size: 30px;
+
+	    	.barbershop {
+	    		font-size: 35px;
+	    	}
+    	}
+	}
+}
+
+@media (max-width: 600px) {
+	.start-page {
+		padding-top: 30%;
+	}
+}
+
+@media (max-width: 400px) {
+	.start-page {
+		padding-top: 40%;
+		.title {
+			.barbershop {
+				font-size: 25px;
+			}
+		}
+	}
+}
+
+.about {
+	padding: 100px;
+	font-size: 0;
+
+	.about-column {
+		display: inline-block;
+		width: 33%;
+		vertical-align: top;
+		font-family: Born;
+		font-size: 16px;
+		line-height: 30px;
+		padding-left: 50px;
+		font-size: 1rem;
+	}
+
+	.about-column-main {
+		padding-left: 0px;
+	}
+
+	h2 {
+		font-family: proximanovabold;
+		font-size: 48px;
+		text-transform: uppercase;
+		line-height: 48px;
+		margin: 0;
+	}
+}
+
+@media (max-width: 1000px) {
+	.about {
+		padding: 100px 20px;
+
+		.about-column {
+			display: block;
+			width: 100%;
+			padding-left: 0;
+			padding-top: 30px;
+
+			img {
+				width: 50px;
+				display: inline;
+				padding-right: 20px;
+			}
+		}
+
+		h2 {
+			font-size: 30px;
+			line-height: 30px;
+			display: inline;
+		}
+	}
+}
+
+.detail {
+	background: url("images/man.jpg") no-repeat;
+	-moz-background-size: cover; /* Firefox 3.6+ */
+    -webkit-background-size: cover; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: cover; /* Opera 9.6+ */
+    background-size: cover; /* Современные браузеры */
+    min-height: 80vh;
+    max-height: 582px;
+    color: white;
+    padding: 100px;
+	padding-bottom: 0;
+    position: relative;
+    
+
+    .rotate {
+	    position: absolute;
+	    margin: 0;
+	    right: 0;
+	    bottom: 100px;
+
+    	/* поворот текста */
+    	-moz-transform: rotate(-90deg);
+	    -webkit-transform: rotate(-90deg);
+   		-o-transform: rotate(-90deg);
+	    writing-mode: tb-rl;
+	    
+
+	    h2 {
+	    	font-family: proximanovabold;
+	    	font-size: 48px;
+	    	text-align: left;
+    		margin-bottom: 0;
+    	}
+
+    }
+}
+
+@media (max-width: 1000px) {
+	.detail {
+		padding:0;
+		.rotate{
+		    position: absolute;
+		    margin: 0;
+		    left: -50px;
+		    bottom: 180px;
+		    width: 300px;
+
+		    h2 {
+		    	font-size: 35px;
+		    	text-align: left;
+	    		margin: 0;
+    		}
+
+		    img {
+		    	display: none;
+		    }
+		}
+	}
+}	
+
+.services {
+	padding: 100px;
+	padding-bottom: 0;
+	font-size: 0;
+
+	.single-service {
+		display: inline-block;
+		width: 25%;
+		padding-left: 60px;
+		font-size: 1rem;
+
+		h3 {
+			font-size: 48px;
+			font-family: proximanova-regular;
+			margin:0;
+			margin-bottom: 35px;
+
+			span {
+				font-family: proximanovabold;
+
+				&:before {
+					content: "($";
+				}
+
+				&:after {
+					content: ")";
+				}
+			}
+		}
+	}
+
+	.single-service-first {
+		padding-left: 0px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.services {
+		padding: 100px 20px;
+
+
+		.single-service {
+			display: inline-block;
+			width: 50%;
+			padding: 50px 20px 0px;
+			font-size: 1rem;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.services {
+		padding: 100px 20px;
+
+		.single-service {
+			display: inline-block;
+			width: 100%;
+			padding: 0;
+			font-size: 1rem;
+		}
+	}
+}
+
+.lookbook {
+	padding: 100px;
+	padding-bottom: 0;
+
+    img {
+		float: left;
+		width: 29.7%;
+
+		&:first-child {
+			width: 40.6%;
+		}
+
+		&:last-child {
+			width: 59.4%;
+		}
+
+	}
+}
+
+@media (max-width: 1000px) {
+	.lookbook {
+		padding: 0px 20px 100px;
+
+		.images {
+			font-size: 0;
+			img {
+				float: none;
+				width: 100% !important;
+			}
+		}
+	}
+}
+
+.reservations {
+	padding: 100px;
+
+	form {
+		position: relative;
+	    font-family: Born;
+	    font-size: 16px;
+	    color: #595959;
+
+		textarea {
+			float: right;
+	    	position: absolute;
+	    	top:0;
+	    	right:0;
+	    	margin: 0;
+	    	width: 60%;
+	    	height: 280px;
+	    	vertical-align: text-top;
+	    	resize: none;
+	    	padding: 15px;
+		}
+
+		input {
+	    	width: 35%;
+	    	margin-bottom: 20px;
+	    	height: 55px; 
+	    	padding: 15px;
+	    	margin-right: 5%;
+
+	    	&:last-child {
+	    		width: 17.5%;
+	    		background-color: #ffdc19;
+	    		color: white;
+	    		border:none;
+	    		font-family: proximanovabold;
+	    		font-size: 24px;
+
+	    	}
+		}
+
+	}	
+}
+
+@media (max-width: 1000px) {
+	.reservations {
+		padding: 0px 20px 20px;
+
+		form {
+			position: static;
+
+			textarea {
+				float: none;
+		    	position: static;
+		    	width: 100%;
+		    	height: 100px;
+			}
+
+			input {
+		    	width: 100%;
+
+		    	&:last-child {
+		    		margin-top: 20px;
+		    		width: 50%;
+		    	}
+			}
+
+		}	
+	}
+}
+
+.footer {
+	padding: 35px 100px;
+	width: 100%;
+	background-color: #212121;
+	
+    .logo {
+		display: inline-block;
+
+		img {
+			margin: 10px;
+			display: inline;
+			vertical-align: middle;
+		}
+		span {
+			font-family: AzedoBold;
+			font-size: 34px;
+			color: white;
+		}
+	}
+
+	.navigation {
+		display: inline-block;
+		float: right;
+
+		a {
+			&, 
+			&:active,
+			&:visited,
+			&:hover {
+				color: white;
+				text-decoration: none;
+			}
+		}
+
+		ul {
+			li {
+				display: inline;
+				margin-left: 25px;
+				font-family: proximanova-regular;
+				font-size: 14px;
+				text-transform: uppercase;
+			}
+		}
+			
+		
+	}
+}
+
+@media (max-width: 900px){
+	.footer {
+		width: 100%;
+		padding: 20px;
+		text-align: center;
+
+		.navigation {
+			display: none;
+		}
+	}
+}
